@@ -12,7 +12,7 @@ import java.nio.charset.StandardCharsets;
 @Configuration
 public class ThymeleafTemplateConfig {
 
-    @Bean
+    /*@Bean
     public SpringTemplateEngine springTemplateEngine() {
         SpringTemplateEngine springTemplateEngine = new SpringTemplateEngine();
         springTemplateEngine.addTemplateResolver(htmlTemplateResolver());
@@ -22,10 +22,9 @@ public class ThymeleafTemplateConfig {
     @Bean
     public SpringResourceTemplateResolver htmlTemplateResolver() {
         SpringResourceTemplateResolver springResourceTemplateResolver = new SpringResourceTemplateResolver();
-        springResourceTemplateResolver.setPrefix("templates/");
         springResourceTemplateResolver.setSuffix(".html");
-        springResourceTemplateResolver.setTemplateMode(TemplateMode.HTML);
+        springResourceTemplateResolver.setTemplateMode(TemplateMode.HTML5);
         springResourceTemplateResolver.setCharacterEncoding(StandardCharsets.UTF_8.name());
         return springResourceTemplateResolver;
-    }
+    }*/
 }

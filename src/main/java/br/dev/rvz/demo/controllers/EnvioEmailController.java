@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.mail.MessagingException;
+
 @RestController
 @RequestMapping("envio/")
 public class EnvioEmailController {
@@ -16,7 +18,7 @@ public class EnvioEmailController {
     private EnvioService envioService;
 
     @PostMapping
-    public void enviarEmail(@RequestBody Email email) {
+    public void enviarEmail(@RequestBody Email email) throws MessagingException {
         envioService.enviarEmail(email);
     }
 }
